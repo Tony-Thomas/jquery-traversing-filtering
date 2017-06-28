@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Traversing and Filtering</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <style>
+        .container * {
+            display: block;
+            border: 2px solid grey;
+            color: grey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div> div [great-grandparent]
+            <ul> ul [grandparent]
+                <li> li [parent]
+                    <span></span>
+                </li>
+            </ul>
+        </div>
+        <div> div [grandparent]
+            <p> p [parent]
+                <span></span>
+            </p>
+        </div>
+
+        <div> div [parent]
+            <p>P</p>
+            <span>Span</span>
+            <h2>H2</h2>
+            <h3>H3</h3>
+            <p>P2</p>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        $(document).ready(function(){
+            // Direct parents
+            //$('span').parent().css({'color':'red', 'border':'2px red solid'});\
+
+            // All Parents
+            //$('span').parents().css({'color':'red', 'border':'2px red solid'});
+
+            // Only UL parents
+            //$('span').parents('ul').css({'color':'red', 'border':'2px red solid'});
+
+            //Until DIV
+            //$('span').parentsUntil('div').css({'color':'red', 'border':'2px red solid'});
+
+            //Until UL
+            //$('span').parentsUntil('ul').css({'color':'red', 'border':'2px red solid'});
+
+            // Children
+            //$('div').children().css({'color':'red', 'border':'2px red solid'});
+
+            // Find
+            //$('div').find('p').css({'color':'red', 'border':'2px red solid'});
+
+            // Siblings
+            //$('h2').siblings('p').css({'color':'red', 'border':'2px red solid'});
+
+            // Next
+            //$('h2').next().css({'color':'red', 'border':'2px red solid'});
+
+            // Next All
+            //$('h2').nextAll().css({'color':'red', 'border':'2px red solid'});
+
+            // Next Until
+            //$('p').nextUntil('h3').css({'color':'red', 'border':'2px red solid'});
+
+             // Previous
+            //$('h2').prev().css({'color':'red', 'border':'2px red solid'});
+
+            // Prev All
+            //$('h2').prevAll().css({'color':'red', 'border':'2px red solid'});
+
+            // Prev Until
+            //$('p').prevUntil('span').css({'color':'red', 'border':'2px red solid'});
+
+            // First
+            //$('p').first().css({'color':'red', 'border':'2px red solid'});
+
+            // Last
+            $('p').last().css({'color':'red', 'border':'2px red solid'});
+
+        });
+    </script>
+</body>
+</html>
